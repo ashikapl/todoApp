@@ -5,7 +5,7 @@ from app.models.todo import Todo
 # create todo data
 def add_todo_store(user_id, data):
     with DB_CONFIG.cursor() as cursor:
-        query = "INSERT INTO Todo(title, description, status, priority,user_id) VALUES (%s, %s, %s, %s, %s)"
+        query = "INSERT INTO Todo(title, description, status, priority, user_id) VALUES (%s, %s, %s, %s, %s)"
         values = (data["title"], data["description"], data["status"], data["priority"], user_id)
         cursor.execute(query, values)
         DB_CONFIG.commit()

@@ -3,8 +3,6 @@ from app.store.todo import *
 from app.utils.validator import validate_user
 # we can use here * all instead of writing all functions name
 
-user_service_url = "http://127.0.0.1:5000/users"
-
 # create todo data
 def add_todo_service(user_id, data):
     try:
